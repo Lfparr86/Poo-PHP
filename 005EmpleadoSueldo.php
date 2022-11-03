@@ -1,11 +1,11 @@
 
 <?php
-/*005EmpleadoSueldo.php: Copia la clase del ejercicio anterior y modifícala. Cambia la 
+/*005Empleadoueldo.php: Copia la clase del ejercicio anterior y modifícala. Cambia la 
 constante por una variable estática sueldoTope, de manera que mediante 
 getter/setter puedas modificar su valor */
 
 
-class empleados{
+class Empleado{
 
     private   $numero=[];
     private static $sueldotope = 5000;
@@ -119,12 +119,12 @@ class empleados{
 
 }
 //creamos un trabajador y lo creamos dando la informacion
-$trabajadorUno = new empleados("luisfer","parra");
+$trabajadorUno = new Empleado("luisfer","parra");
 
 
 $trabajadorUno ->anyadirTelefono(655443322);
 
-$trabajadorDos = new empleados("dkglfh", "kjdsgj");
+$trabajadorDos = new Empleado("dkglfh", "kjdsgj");
 
 $trabajadorDos ->setSueldo(5000);
 $trabajadorDos ->anyadirTelefono(655443323);

@@ -6,7 +6,7 @@ mediante el constructor (utiliza la sintaxis de PHP8). Si el constructor recibe 
 parámetro, será el sueldo del Empleado. Si no, se le asignará 1000€ como sueldo 
 inicial.*/
 
-class empleados{
+class Empleado{
 
 
     private   $numero=[];
@@ -112,12 +112,12 @@ class empleados{
 }
 /*creamos un trabajador y lo creamos dando la informacion pero esta vez sin el setearla como las anteriores
 pasamos el nombre y apellidos que no estan iniciadas el sueldo lo tenemos iniciado y no lo pasamos*/
-$trabajadorUno = new empleados("luisfer","parra");
+$trabajadorUno = new Empleado("luisfer","parra");
 
 //llamamos a la funcion añadir numero pasando un numero
 $trabajadorUno ->anyadirTelefono(655443322);
 
-$trabajadorDos = new empleados("dkglfh", "kjdsgj");
+$trabajadorDos = new Empleado("dkglfh", "kjdsgj");
 //en este caso seteamos nosotros el sueldo no usamso en valor base de los 1000 como en el anterior
 $trabajadorDos ->setSueldo(5000);
 $trabajadorDos ->anyadirTelefono(655443323);

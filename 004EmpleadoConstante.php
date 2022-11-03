@@ -4,7 +4,7 @@ una constante SUELDO_TOPE con el valor del sueldo que debe pagar impuestos, y
 modifica el código para utilizar la constante.*/
 
 
-class empleados{
+class Empleado{
 
 
     private   $numero=[];
@@ -111,12 +111,12 @@ class empleados{
 
 }
 //creamos un trabajador y lo creamos dando la informacion
-$trabajadorUno = new empleados("luisfer","parra");
+$trabajadorUno = new Empleado("luisfer","parra");
 
 
 $trabajadorUno ->anyadirTelefono(655443322);
 
-$trabajadorDos = new empleados("dkglfh", "kjdsgj");
+$trabajadorDos = new Empleado("dkglfh", "kjdsgj");
 
 $trabajadorDos ->setSueldo(5000);
 $trabajadorDos ->anyadirTelefono(655443323);

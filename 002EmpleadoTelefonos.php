@@ -8,7 +8,7 @@ public function anyadirTelefono(int $telefono) : void → Añade un teléfono al
 public function listarTelefonos(): string → Muestra los teléfonos separados por comas
 public function vaciarTelefonos(): void → Elimina todos los teléfonos*/
 
-class empleados{//clase
+class Empleado{//clase
     private string $nombre;
     private string $apellidos;
     private int $sueldo;
@@ -99,13 +99,13 @@ class empleados{//clase
     }
 }
 //creamos un trabajador y lo creamos dando la informacion
-$trabajadorUno = new empleados();
+$trabajadorUno = new Empleado();
 $trabajadorUno ->setNombre("Luis Fernando");
 $trabajadorUno ->setApellidos("Parra");
 $trabajadorUno ->setSueldo(5000);
 $trabajadorUno ->anyadirTelefono(655443322);
 
-$trabajadorDos = new empleados();
+$trabajadorDos = new Empleado();
 $trabajadorDos ->setNombre("Luis Fernando");
 $trabajadorDos ->setApellidos("Parra");
 $trabajadorDos ->setSueldo(5000);

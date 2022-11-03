@@ -6,7 +6,7 @@ Obtener su nombre completo → getNombreCompleto(): string
 Que devuelva un booleano indicando si debe o no pagar impuestos (se pagan cuando 
 el sueldo es superior a 3333€) → debePagarImpuestos(): bool*/
 
-class empleados{//clase
+class Empleado{//clase
     private string $nombre;
     private string $apellidos;
     private int $sueldo;
@@ -70,7 +70,7 @@ class empleados{//clase
     }
 }
 //creamos un trabajador y lo creamos dando la informacion el objeto asignamos con ->
-$trabajadorUno = new empleados();
+$trabajadorUno = new Empleado();
 $trabajadorUno ->setNombre("Luis Fernando");
 $trabajadorUno ->setApellidos("Parra");
 $trabajadorUno ->setSueldo(5000);

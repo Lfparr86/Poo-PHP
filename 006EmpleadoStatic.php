@@ -1,6 +1,6 @@
 <?php
 
-/*006EmpleadoStatic.php: Copia la clase del ejercicio anterior y modifícala. Completa el 
+/*006Empleadotatic.php: Copia la clase del ejercicio anterior y modifícala. Completa el 
 siguiente método con una cadena HTML que muestre los datos de un empleado 
 dentro de un párrafo y todos los teléfonos mediante una lista ordenada (para ello, 
 deberás crear un getter para los teléfonos):
@@ -8,7 +8,7 @@ deberás crear un getter para los teléfonos):
 public static function toHtml(Empleado $emp): string */
 
 
-class empleados{
+class Empleado{ //TODO: Renombrar las clases con Mayus y usarlas en la llamada como tal.
 
     private   $numero=[];
     private static $sueldotope = 5000;
@@ -95,8 +95,9 @@ class empleados{
        }
 
     public function debePagarImpuestos():bool{
-
-        if ($this->sueldo<$this::SUELDO_TOPE) {
+        /* TODO: si la constante está definida en mayúsculas se llama así,
+        pero es que no tienes ni la constante definida con ese nombre, por eso te da fallo.*/
+        if ($this->sueldo<$this::$sueldotope) {
             return false;
         }else{
             return true;
@@ -120,7 +121,14 @@ class empleados{
 
     public static function toHtml(Empleado $emp): string{
 
-        return $prue ->getNombreCompleto;
+        $resultado ="<ol>";
+        $resultado = $emp ->getNombreCompleto();
+        for ($i=0; $i <count($emp->numero) ; $i++) { 
+            $resultado =$resultado . "<li>".$emp->numero[$i]."</li>";
+        }
+        $resultado+="</ol>";
+
+        return $resultado;
          
 
     }
@@ -129,19 +137,19 @@ class empleados{
 
 }
 //creamos un trabajador y lo creamos dando la informacion
-$trabajadorUno = new empleados("luisfer","parra");
+$trabajadorUno = new Empleado("luisfer","parra");
 
 
 $trabajadorUno ->anyadirTelefono(655443322);
 
-$trabajadorDos = new empleados("dkglfh", "kjdsgj");
+$trabajadorDos = new Empleado("dkglfh", "kjdsgj");
 
 $trabajadorDos ->setSueldo(5000);
 $trabajadorDos ->anyadirTelefono(655443323);
 $trabajadorDos ->anyadirTelefono(6554433266);
 $trabajadorDos ->anyadirTelefono(65544332343454);
  
-echo empleado ::toHtml($trabajadorDos);
+echo Empleado::toHtml($trabajadorDos);
 
 
 
